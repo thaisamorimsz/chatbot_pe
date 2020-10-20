@@ -9,37 +9,47 @@ from sklearn.tree import export_graphviz
 import pydotplus
 
 
-col_names = ['pregnant', 'glucose', 'bp', 'skin', 'insulin', 'bmi', 'pedigree', 'age', 'label']
-# load dataset
-pima = pd.read_csv("pima-indians-diabetes.csv", header=None, names=col_names)
+col_names = ['id', 'date', 'price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','yr_renovated','zipcode','lat','long','sqft_living15','sqft_lot15','expensive']
+col_cri_names = ['id', 'date', 'price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','yr_renovated','zipcode','lat','long','sqft_living15','sqft_lot15']
+criterios = pd.read_csv("criterios.csv",sep=",",header=0,names=col_cri_names)
 
-print(pima)
+accuracy_file = open("precisoes","w")
 
-#split dataset in features and target variable
-feature_cols = ['pregnant', 'insulin', 'bmi', 'age','glucose','bp','pedigree']
-X = pima[feature_cols] # Features
-y = pima.label # Target variable
+for i in range(0,len(criterios)):
+    # load dataset
+    data = pd.read_csv("nossas_casas_tratadas_"+str(i)+".csv", header=0, names=col_names)
 
-# Split dataset into training set and test set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1) # 70% training and 30% test
+    print(data)
+
+    #split dataset in features and target variable
+    feature_cols = ['id', 'date', 'price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','yr_renovated','zipcode','lat','long','sqft_living15','sqft_lot15']
+    X = data[feature_cols] # Features
+    y = data.expensive # Target variable
+
+    # Split dataset into training set and test set
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.05, random_state=0) # 95% training and 5% test
 
 
-# Create Decision Tree classifer object
-clf = DecisionTreeClassifier(criterion="gini", max_depth=3)
+    # Create Decision Tree classifer object
+    clf = DecisionTreeClassifier(criterion="gini")
 
-# Train Decision Tree Classifer
-clf = clf.fit(X_train,y_train)
+    # Train Decision Tree Classifer
+    clf = clf.fit(X_train,y_train)
 
-#Predict the response for test dataset
-y_pred = clf.predict(X_test)
+    #Predict the response for test dataset
+    y_pred = clf.predict(X_test)
 
-# Model Accuracy, how often is the classifier correct?
-print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+    # Model Accuracy, how often is the classifier correct?
+    print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+    accuracy_file.write("Precisao para o "+str(i)+"o conjunto de criterios: "+str(metrics.accuracy_score(y_test, y_pred))+"\n")
 
-dot_data = StringIO()
-export_graphviz(clf, out_file=dot_data,  
-                filled=True, rounded=True,
-                special_characters=True, feature_names = feature_cols,class_names=['0','1'])
-graph = pydotplus.graph_from_dot_data(dot_data.getvalue())  
-graph.write_png('diabetes.png')
-Image(graph.create_png())
+    dot_data = StringIO()
+    export_graphviz(clf, out_file=dot_data,  
+                    filled=True, rounded=True,
+                    special_characters=True, feature_names = feature_cols,class_names=['barato','caro'],node_ids=True)
+    graph = pydotplus.graph_from_dot_data(dot_data.getvalue())  
+    graph.write_png('arvore_casas_'+str(i)+'.png')
+    Image(graph.create_png())
+
+
+accuracy_file.close()
