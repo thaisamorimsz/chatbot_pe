@@ -7,6 +7,8 @@ from sklearn.externals.six import StringIO
 from IPython.display import Image  
 from sklearn.tree import export_graphviz
 import pydotplus
+import numpy as np
+import csv
 
 
 col_names = ['id', 'date', 'price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','yr_renovated','zipcode','lat','long','sqft_living15','sqft_lot15','expensive']
@@ -14,10 +16,18 @@ col_cri_names = ['id', 'date', 'price', 'bedrooms', 'bathrooms', 'sqft_living', 
 criterios = pd.read_csv("criterios.csv",sep=",",header=0,names=col_cri_names)
 
 accuracy_file = open("precisoes","w")
+row_output = []
 
-for i in range(0,len(criterios)):
+chatbot_tree_col_names = ['ID','Pergunta','A','Nó A','B','Nó B']
+
+for j in range(0,len(criterios)):
+
+    chatbot_tree = open(str("arvore_"+str(j)+".csv"),"w")
+    chatbot_tree_writer = csv.writer(chatbot_tree, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    chatbot_tree_writer.writerow(chatbot_tree_col_names)
+
     # load dataset
-    data = pd.read_csv("nossas_casas_tratadas_"+str(i)+".csv", header=0, names=col_names)
+    data = pd.read_csv("nossas_casas_tratadas_"+str(j)+".csv", header=0, names=col_names)
 
     print(data)
 
@@ -27,7 +37,7 @@ for i in range(0,len(criterios)):
     y = data.expensive # Target variable
 
     # Split dataset into training set and test set
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.05, random_state=0) # 95% training and 5% test
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.05, random_state=1) # 95% training and 5% test
 
 
     # Create Decision Tree classifer object
@@ -35,21 +45,42 @@ for i in range(0,len(criterios)):
 
     # Train Decision Tree Classifer
     clf = clf.fit(X_train,y_train)
-
     #Predict the response for test dataset
     y_pred = clf.predict(X_test)
 
     # Model Accuracy, how often is the classifier correct?
     print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
-    accuracy_file.write("Precisao para o "+str(i)+"o conjunto de criterios: "+str(metrics.accuracy_score(y_test, y_pred))+"\n")
+    accuracy_file.write("Precisao para o "+str(j)+"o conjunto de criterios: "+str(metrics.accuracy_score(y_test, y_pred))+"\n")
 
     dot_data = StringIO()
     export_graphviz(clf, out_file=dot_data,  
                     filled=True, rounded=True,
-                    special_characters=True, feature_names = feature_cols,class_names=['barato','caro'],node_ids=True)
+                    special_characters=True, feature_names = feature_cols,class_names=['barata','cara'],node_ids=True)
     graph = pydotplus.graph_from_dot_data(dot_data.getvalue())  
-    graph.write_png('arvore_casas_'+str(i)+'.png')
+    graph.write_png('arvore_casas_'+str(j)+'.png')
     Image(graph.create_png())
 
+    children_left_array = clf.tree_.children_left #array of left children
+    children_right_array = clf.tree_.children_right #array of right children
+    features_array = clf.tree_.feature #array of nodes splitting feature
+    values_array = clf.tree_.value
 
+    for x in range(0,len(children_left_array)):
+        row_output.append(x)
+        if children_left_array[x] < 0 and children_right_array[x] < 0:
+            row_output.append("NÓ FOLHA")
+            if not np.argmax(values_array[x]):
+                row_output.append("Essa casa provavelmente é barata.")
+            else:
+                row_output.append("Essa casa provavelmente é cara.")
+        else:
+            row_output.append(str(col_cri_names[features_array[x]])+"<="+str(criterios.iloc[0][features_array[x]])+"?")   
+            row_output.append("SIM")
+            row_output.append(children_left_array[x])
+            row_output.append("NÃO")
+            row_output.append(children_right_array[x])
+        
+        chatbot_tree_writer.writerow(row_output)
+        row_output = []
+    
 accuracy_file.close()
