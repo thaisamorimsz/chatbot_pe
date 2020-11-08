@@ -24,15 +24,15 @@ ID,Pergunta,A,Nó A,B,Nó B
 22,NÓ FOLHA,Essa casa provavelmente é cara.
 23,sqft_basement<=500?,SIM,24,NÃO,61
 24,yr_renovated<=0?,SIM,25,NÃO,34
-25,lat<=475?,SIM,26,NÃO,33
-26,date<=2014?,SIM,27,NÃO,32
-27,id<=2000000000?,SIM,28,NÃO,31
-28,sqft_above<=2000?,SIM,29,NÃO,30
-29,NÓ FOLHA,Essa casa provavelmente é cara.
-30,NÓ FOLHA,Essa casa provavelmente é barata.
+25,long<=-122200?,SIM,26,NÃO,27
+26,NÓ FOLHA,Essa casa provavelmente é cara.
+27,date<=2014?,SIM,28,NÃO,33
+28,id<=2000000000?,SIM,29,NÃO,32
+29,floors<=1?,SIM,30,NÃO,31
+30,NÓ FOLHA,Essa casa provavelmente é cara.
 31,NÓ FOLHA,Essa casa provavelmente é barata.
 32,NÓ FOLHA,Essa casa provavelmente é barata.
-33,NÓ FOLHA,Essa casa provavelmente é cara.
+33,NÓ FOLHA,Essa casa provavelmente é barata.
 34,sqft_lot<=10000?,SIM,35,NÃO,60
 35,long<=-122200?,SIM,36,NÃO,43
 36,bathrooms<=2?,SIM,37,NÃO,38
@@ -65,17 +65,17 @@ ID,Pergunta,A,Nó A,B,Nó B
 63,id<=2000000000?,SIM,64,NÃO,79
 64,sqft_lot<=10000?,SIM,65,NÃO,72
 65,lat<=475?,SIM,66,NÃO,71
-66,date<=2014?,SIM,67,NÃO,68
-67,NÓ FOLHA,Essa casa provavelmente é barata.
-68,yr_built<=1970?,SIM,69,NÃO,70
+66,yr_built<=1970?,SIM,67,NÃO,70
+67,date<=2014?,SIM,68,NÃO,69
+68,NÓ FOLHA,Essa casa provavelmente é barata.
 69,NÓ FOLHA,Essa casa provavelmente é barata.
 70,NÓ FOLHA,Essa casa provavelmente é barata.
 71,NÓ FOLHA,Essa casa provavelmente é barata.
-72,lat<=475?,SIM,73,NÃO,76
-73,date<=2014?,SIM,74,NÃO,75
+72,date<=2014?,SIM,73,NÃO,76
+73,lat<=475?,SIM,74,NÃO,75
 74,NÓ FOLHA,Essa casa provavelmente é barata.
 75,NÓ FOLHA,Essa casa provavelmente é barata.
-76,date<=2014?,SIM,77,NÃO,78
+76,lat<=475?,SIM,77,NÃO,78
 77,NÓ FOLHA,Essa casa provavelmente é barata.
 78,NÓ FOLHA,Essa casa provavelmente é barata.
 79,NÓ FOLHA,Essa casa provavelmente é barata.
@@ -115,19 +115,19 @@ ID,Pergunta,A,Nó A,B,Nó B
 113,NÓ FOLHA,Essa casa provavelmente é barata.
 114,bathrooms<=2?,SIM,115,NÃO,146
 115,view<=0?,SIM,116,NÃO,121
-116,floors<=1?,SIM,117,NÃO,120
-117,long<=-122200?,SIM,118,NÃO,119
-118,NÓ FOLHA,Essa casa provavelmente é barata.
-119,NÓ FOLHA,Essa casa provavelmente é cara.
+116,lat<=475?,SIM,117,NÃO,118
+117,NÓ FOLHA,Essa casa provavelmente é cara.
+118,yr_built<=1970?,SIM,119,NÃO,120
+119,NÓ FOLHA,Essa casa provavelmente é barata.
 120,NÓ FOLHA,Essa casa provavelmente é cara.
 121,date<=2014?,SIM,122,NÃO,137
 122,sqft_basement<=500?,SIM,123,NÃO,130
 123,floors<=1?,SIM,124,NÃO,125
 124,NÓ FOLHA,Essa casa provavelmente é barata.
-125,id<=2000000000?,SIM,126,NÃO,129
-126,sqft_lot<=10000?,SIM,127,NÃO,128
-127,NÓ FOLHA,Essa casa provavelmente é cara.
-128,NÓ FOLHA,Essa casa provavelmente é barata.
+125,lat<=475?,SIM,126,NÃO,129
+126,long<=-122200?,SIM,127,NÃO,128
+127,NÓ FOLHA,Essa casa provavelmente é barata.
+128,NÓ FOLHA,Essa casa provavelmente é cara.
 129,NÓ FOLHA,Essa casa provavelmente é barata.
 130,sqft_above<=2000?,SIM,131,NÃO,134
 131,sqft_lot<=10000?,SIM,132,NÃO,133
@@ -145,7 +145,7 @@ ID,Pergunta,A,Nó A,B,Nó B
 143,NÓ FOLHA,Essa casa provavelmente é barata.
 144,NÓ FOLHA,Essa casa provavelmente é cara.
 145,NÓ FOLHA,Essa casa provavelmente é barata.
-146,sqft_lot15<=10000?,SIM,147,NÃO,190
+146,sqft_lot15<=10000?,SIM,147,NÃO,184
 147,lat<=475?,SIM,148,NÃO,173
 148,id<=2000000000?,SIM,149,NÃO,164
 149,sqft_basement<=500?,SIM,150,NÃO,157
@@ -174,19 +174,13 @@ ID,Pergunta,A,Nó A,B,Nó B
 172,NÓ FOLHA,Essa casa provavelmente é barata.
 173,sqft_basement<=500?,SIM,174,NÃO,175
 174,NÓ FOLHA,Essa casa provavelmente é barata.
-175,date<=2014?,SIM,176,NÃO,181
-176,long<=-122200?,SIM,177,NÃO,180
-177,id<=2000000000?,SIM,178,NÃO,179
-178,NÓ FOLHA,Essa casa provavelmente é cara.
+175,long<=-122200?,SIM,176,NÃO,181
+176,id<=2000000000?,SIM,177,NÃO,178
+177,NÓ FOLHA,Essa casa provavelmente é cara.
+178,date<=2014?,SIM,179,NÃO,180
 179,NÓ FOLHA,Essa casa provavelmente é barata.
 180,NÓ FOLHA,Essa casa provavelmente é barata.
-181,sqft_living<=2000?,SIM,182,NÃO,189
-182,view<=0?,SIM,183,NÃO,184
+181,id<=2000000000?,SIM,182,NÃO,183
+182,NÓ FOLHA,Essa casa provavelmente é barata.
 183,NÓ FOLHA,Essa casa provavelmente é cara.
-184,long<=-122200?,SIM,185,NÃO,188
-185,id<=2000000000?,SIM,186,NÃO,187
-186,NÓ FOLHA,Essa casa provavelmente é cara.
-187,NÓ FOLHA,Essa casa provavelmente é barata.
-188,NÓ FOLHA,Essa casa provavelmente é barata.
-189,NÓ FOLHA,Essa casa provavelmente é cara.
-190,NÓ FOLHA,Essa casa provavelmente é barata.
+184,NÓ FOLHA,Essa casa provavelmente é barata.
