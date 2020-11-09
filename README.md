@@ -7,3 +7,8 @@ Classification em Python, através da utiização de critérios e aleatoriedade 
 ## Dados de uso
 
 Utilizamos os dados referentes ao ZipCode : 98004 da tabela [House Sales in King County, USA](https://www.kaggle.com/harlfoxem/housesalesprediction), a qual contém 21 colunas.
+
+## Desenvolvimento
+
+
+## Considerações Finais 
