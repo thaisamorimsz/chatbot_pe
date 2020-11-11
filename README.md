@@ -21,4 +21,4 @@ o proximo passo consiste na geração das árvores e na obtenção das precisõe
 o arquivo *chatbot_engine.py* é responsável pela leitura do arquivo *arvore_j.csv*, ou seja, ele realiza a condução do chatboot, realizando as questões e ao fim se possível, classificando o imovel em barato ou caro.
 
 ## Considerações Finais
-Como autoavalição deste projeto usamos os dados do arquivo *casas_avaliacao.csv* como entradas para as perguntas do chatboot, e por fim a rotina no arquivo *gini_tree_rawdata.py * executa o mesmo processo do *gini_tree.py* porém sem o tratamento dos dados.
+Como autoavalição deste projeto usamos os dados do arquivo *casas_avaliacao.csv* como entradas para as perguntas do chatboot, e por fim a rotina no arquivo *gini_tree_rawdata.py* executa o mesmo processo do *gini_tree.py* porém sem o tratamento dos dados.
