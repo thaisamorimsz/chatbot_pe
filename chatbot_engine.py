@@ -2,6 +2,10 @@ import pandas as pd
 import os
 import sys
 
+
+DIR = ""
+#DIR = "D:/workspace/chatbot_pe/"
+
 class Tree():
     def __init__(self):
         pass
@@ -17,7 +21,14 @@ class Tree():
         else:
             return False
 
-texto = pd.read_csv("arvore.csv",sep=';',index_col="ID")
+
+while True:
+    arvoreIndex = int(input("Escolha uma arvore de decisão (0-7): "))
+    if 0<=arvoreIndex<=7:
+        texto = pd.read_csv(DIR+"arvore_"+str(arvoreIndex)+".csv",sep=',',index_col="ID")
+        break
+    else:
+        print("Arvore inexistente")
 
 def rec_build_tree(linha):
     row = texto.loc[linha]
@@ -36,7 +47,7 @@ def is_obj(obj):
 
 counter_tickets = 0
 while True:
-    arvore = rec_build_tree(1)
+    arvore = rec_build_tree(0)
     count_erros=0
     while True:
         if count_erros == 2:
@@ -71,4 +82,4 @@ while True:
             
     print(answer)
                 
-    print("-------------------------------------")
+    print("-------------------------
