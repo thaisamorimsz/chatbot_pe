@@ -22,7 +22,7 @@ chatbot_tree_col_names = ['ID','Pergunta','A','Nó A','B','Nó B']
 
 for j in range(0,len(criterios)):
 
-    chatbot_tree = open(str("D:/workspace/chatbot_pe/arvore_"+str(j)+".csv"),"w")
+    chatbot_tree = open(str("D:/workspace/chatbot_pe/arvore_"+str(j)+".csv"),"w",encoding='utf-8')
     chatbot_tree_writer = csv.writer(chatbot_tree, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     chatbot_tree_writer.writerow(chatbot_tree_col_names)
 
@@ -37,7 +37,7 @@ for j in range(0,len(criterios)):
     y = data.expensive # Target variable
 
     # Split dataset into training set and test set
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.05, random_state=1) # 95% training and 5% test
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1) # 95% training and 5% test
 
 
     # Create Decision Tree classifer object
@@ -74,7 +74,7 @@ for j in range(0,len(criterios)):
             else:
                 row_output.append("Essa casa provavelmente é cara.")
         else:
-            row_output.append(str(col_cri_names[features_array[x]])+"<="+str(criterios.iloc[0][features_array[x]])+"?")   
+            row_output.append(str(col_cri_names[features_array[x]])+"<="+str(criterios.iloc[j][features_array[x]])+"?")   
             row_output.append("SIM")
             row_output.append(children_left_array[x])
             row_output.append("NÃO")
@@ -84,3 +84,5 @@ for j in range(0,len(criterios)):
         row_output = []
     
 accuracy_file.close()
+
+

@@ -3,8 +3,8 @@ import os
 import sys
 
 
-DIR = ""
-#DIR = "D:/workspace/chatbot_pe/"
+#DIR = ""
+DIR = "D:/workspace/chatbot_pe/"
 
 class Tree():
     def __init__(self):
@@ -24,7 +24,7 @@ class Tree():
 
 while True:
     arvoreIndex = int(input("Escolha uma arvore de decisão (0-7): "))
-    if 0<=arvoreIndex<=7:
+    if 0<=arvoreIndex<=8:
         texto = pd.read_csv(DIR+"arvore_"+str(arvoreIndex)+".csv",sep=',',index_col="ID")
         break
     else:
@@ -81,5 +81,6 @@ while True:
             arvore = answer 
             
     print(answer)
+
                 
-    print("-------------------------
+    print("-------------------------")
