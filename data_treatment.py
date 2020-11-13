@@ -2,7 +2,8 @@ import pandas as pd
 import csv
 
 col_names = ['id', 'date', 'price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','yr_renovated','zipcode','lat','long','sqft_living15','sqft_lot15','expensive']
-col_cri_names = ['id', 'date', 'price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','yr_renovated','zipcode','lat','long','sqft_living15','sqft_lot15']
+drop_elements = ['price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','yr_renovated','lat','long','sqft_living15','sqft_lot15','expensive']
+col_cri_names = ['price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','yr_renovated','lat','long','sqft_living15','sqft_lot15',]
 
 dados_totais = pd.read_csv("D:/workspace/chatbot_pe/nossas_casas.csv",sep=',')
 criterios = pd.read_csv("D:/workspace/chatbot_pe/criterios.csv",sep=",",header=0,names=col_cri_names)
@@ -13,8 +14,8 @@ dados_interesse = dados_interesse.dropna()
 print(dados_interesse)
 
 for j in range(0,len(criterios)):
-    id_criteria = int(criterios.iloc[j]["id"])
-    date_criteria = int(criterios.iloc[j]["date"])
+#    id_criteria = int(criterios.iloc[j]["id"])
+#    date_criteria = int(criterios.iloc[j]["date"])
     price_criteria = int(criterios.iloc[j]["price"])
     bedrooms_criteria = int(criterios.iloc[j]["bedrooms"])
     bathrooms_criteria = int(criterios.iloc[j]["bathrooms"])
@@ -29,7 +30,7 @@ for j in range(0,len(criterios)):
     sqft_basement_criteria = int(criterios.iloc[j]["sqft_basement"])
     yr_built_criteria = int(criterios.iloc[j]["yr_built"])
     yr_renovated_criteria = int(criterios.iloc[j]["yr_renovated"])
-    zipcode_criteria = int(criterios.iloc[j]["zipcode"])
+#    zipcode_criteria = int(criterios.iloc[j]["zipcode"])
     lat_criteria = int(criterios.iloc[j]["lat"])
     long_criteria = int(criterios.iloc[j]["long"])
     sqft_living15_criteria = int(criterios.iloc[j]["sqft_living15"])
@@ -39,19 +40,19 @@ for j in range(0,len(criterios)):
 
     treated_data = open(str("D:/workspace/chatbot_pe/nossas_casas_tratadas_"+str(j)+".csv"),"w")
     treated_data_writer = csv.writer(treated_data, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    treated_data_writer.writerow(col_names)
+    treated_data_writer.writerow(drop_elements)
     row = []
     for i in range(0,len(dados_interesse)):
-        if int(dados_interesse.iloc[i]["id"])<=id_criteria:
-            row.append(1)
-        else:
-            row.append(0)
+        # if int(dados_interesse.iloc[i]["id"])<=id_criteria:
+        #     row.append(1)
+        # else:
+        #     row.append(0)
         
-        year = dados_interesse.iloc[i]["date"]
-        if int(year[:4])<=date_criteria:
-            row.append(1)
-        else:
-            row.append(0)
+        # year = dados_interesse.iloc[i]["date"]
+        # if int(year[:4])<=date_criteria:
+        #     row.append(1)
+        # else:
+        #     row.append(0)
 
         if int(dados_interesse.iloc[i]["price"]) <=price_criteria:
             row.append(1)
@@ -123,10 +124,10 @@ for j in range(0,len(criterios)):
         else:
             row.append(0)
 
-        if int(dados_interesse.iloc[i]["zipcode"]) <=zipcode_criteria:
-            row.append(1)
-        else:
-            row.append(0)
+        # if int(dados_interesse.iloc[i]["zipcode"]) <=zipcode_criteria:
+        #     row.append(1)
+        # else:
+        #     row.append(0)
         
         if int(dados_interesse.iloc[i]["lat"]) <=lat_criteria:
             row.append(1)

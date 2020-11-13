@@ -23,7 +23,7 @@ class Tree():
 
 
 while True:
-    arvoreIndex = int(input("Escolha uma arvore de decisão (0-7): "))
+    arvoreIndex = int(input("Escolha uma arvore de decisão (0-8): "))
     if 0<=arvoreIndex<=8:
         texto = pd.read_csv(DIR+"arvore_"+str(arvoreIndex)+".csv",sep=',',index_col="ID")
         break
