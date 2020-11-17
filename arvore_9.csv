@@ -1,0 +1,120 @@
+ID,Pergunta,A,Nó A,B,Nó B
+0,bathrooms<=[[175. 132.]]?,SIM,1,NÃO,12
+1,waterfront<=[[ 4. 39.]]?,SIM,2,NÃO,11
+2,grade<=[[ 3. 39.]]?,SIM,3,NÃO,4
+3,NÓ FOLHA,Essa casa provavelmente é cara.
+4,bathrooms<=[[ 3. 11.]]?,SIM,5,NÃO,6
+5,NÓ FOLHA,Essa casa provavelmente é barata.
+6,condition<=[[ 1. 11.]]?,SIM,7,NÃO,10
+7,grade<=[[1. 1.]]?,SIM,8,NÃO,9
+8,NÓ FOLHA,Essa casa provavelmente é cara.
+9,NÓ FOLHA,Essa casa provavelmente é barata.
+10,NÓ FOLHA,Essa casa provavelmente é cara.
+11,NÓ FOLHA,Essa casa provavelmente é barata.
+12,waterfront<=[[171.  93.]]?,SIM,13,NÃO,104
+13,sqft_above<=[[160.  58.]]?,SIM,14,NÃO,87
+14,long<=[[84. 53.]]?,SIM,15,NÃO,50
+15,sqft_basement<=[[57. 19.]]?,SIM,16,NÃO,21
+16,sqft_lot<=[[3. 6.]]?,SIM,17,NÃO,20
+17,sqft_living<=[[1. 6.]]?,SIM,18,NÃO,19
+18,NÓ FOLHA,Essa casa provavelmente é cara.
+19,NÓ FOLHA,Essa casa provavelmente é barata.
+20,NÓ FOLHA,Essa casa provavelmente é barata.
+21,yr_built<=[[54. 13.]]?,SIM,22,NÃO,49
+22,bedrooms<=[[54. 11.]]?,SIM,23,NÃO,48
+23,lat<=[[54. 10.]]?,SIM,24,NÃO,25
+24,NÓ FOLHA,Essa casa provavelmente é cara.
+25,grade<=[[54.  9.]]?,SIM,26,NÃO,43
+26,bathrooms<=[[28.  8.]]?,SIM,27,NÃO,38
+27,grade<=[[26.  4.]]?,SIM,28,NÃO,29
+28,NÓ FOLHA,Essa casa provavelmente é barata.
+29,bathrooms<=[[15.  4.]]?,SIM,30,NÃO,37
+30,long<=[[5. 4.]]?,SIM,31,NÃO,36
+31,view<=[[5. 2.]]?,SIM,32,NÃO,35
+32,lat<=[[5. 1.]]?,SIM,33,NÃO,34
+33,NÓ FOLHA,Essa casa provavelmente é cara.
+34,NÓ FOLHA,Essa casa provavelmente é barata.
+35,NÓ FOLHA,Essa casa provavelmente é cara.
+36,NÓ FOLHA,Essa casa provavelmente é cara.
+37,NÓ FOLHA,Essa casa provavelmente é barata.
+38,lat<=[[2. 4.]]?,SIM,39,NÃO,42
+39,grade<=[[2. 1.]]?,SIM,40,NÃO,41
+40,NÓ FOLHA,Essa casa provavelmente é cara.
+41,NÓ FOLHA,Essa casa provavelmente é barata.
+42,NÓ FOLHA,Essa casa provavelmente é cara.
+43,lat<=[[26.  1.]]?,SIM,44,NÃO,47
+44,lat<=[[3. 1.]]?,SIM,45,NÃO,46
+45,NÓ FOLHA,Essa casa provavelmente é barata.
+46,NÓ FOLHA,Essa casa provavelmente é cara.
+47,NÓ FOLHA,Essa casa provavelmente é barata.
+48,NÓ FOLHA,Essa casa provavelmente é cara.
+49,NÓ FOLHA,Essa casa provavelmente é cara.
+50,sqft_lot<=[[27. 34.]]?,SIM,51,NÃO,62
+51,lat<=[[ 5. 18.]]?,SIM,52,NÃO,61
+52,long<=[[5. 7.]]?,SIM,53,NÃO,60
+53,view<=[[3. 7.]]?,SIM,54,NÃO,55
+54,NÓ FOLHA,Essa casa provavelmente é cara.
+55,bathrooms<=[[3. 3.]]?,SIM,56,NÃO,59
+56,bathrooms<=[[1. 3.]]?,SIM,57,NÃO,58
+57,NÓ FOLHA,Essa casa provavelmente é barata.
+58,NÓ FOLHA,Essa casa provavelmente é cara.
+59,NÓ FOLHA,Essa casa provavelmente é barata.
+60,NÓ FOLHA,Essa casa provavelmente é barata.
+61,NÓ FOLHA,Essa casa provavelmente é cara.
+62,sqft_basement<=[[22. 16.]]?,SIM,63,NÃO,66
+63,view<=[[7. 1.]]?,SIM,64,NÃO,65
+64,NÓ FOLHA,Essa casa provavelmente é barata.
+65,NÓ FOLHA,Essa casa provavelmente é cara.
+66,sqft_basement<=[[15. 15.]]?,SIM,67,NÃO,68
+67,NÓ FOLHA,Essa casa provavelmente é cara.
+68,sqft_living<=[[15. 12.]]?,SIM,69,NÃO,72
+69,long<=[[2. 5.]]?,SIM,70,NÃO,71
+70,NÓ FOLHA,Essa casa provavelmente é cara.
+71,NÓ FOLHA,Essa casa provavelmente é barata.
+72,sqft_living<=[[13.  7.]]?,SIM,73,NÃO,74
+73,NÓ FOLHA,Essa casa provavelmente é barata.
+74,bathrooms<=[[7. 7.]]?,SIM,75,NÃO,78
+75,grade<=[[1. 4.]]?,SIM,76,NÃO,77
+76,NÓ FOLHA,Essa casa provavelmente é barata.
+77,NÓ FOLHA,Essa casa provavelmente é cara.
+78,sqft_basement<=[[6. 3.]]?,SIM,79,NÃO,80
+79,NÓ FOLHA,Essa casa provavelmente é barata.
+80,bathrooms<=[[2. 3.]]?,SIM,81,NÃO,86
+81,sqft_living<=[[2. 1.]]?,SIM,82,NÃO,83
+82,NÓ FOLHA,Essa casa provavelmente é barata.
+83,bathrooms<=[[1. 1.]]?,SIM,84,NÃO,85
+84,NÓ FOLHA,Essa casa provavelmente é cara.
+85,NÓ FOLHA,Essa casa provavelmente é barata.
+86,NÓ FOLHA,Essa casa provavelmente é cara.
+87,sqft_basement<=[[76.  5.]]?,SIM,88,NÃO,89
+88,NÓ FOLHA,Essa casa provavelmente é cara.
+89,yr_built<=[[76.  3.]]?,SIM,90,NÃO,101
+90,grade<=[[75.  2.]]?,SIM,91,NÃO,98
+91,sqft_basement<=[[72.  1.]]?,SIM,92,NÃO,97
+92,bathrooms<=[[14.  1.]]?,SIM,93,NÃO,94
+93,NÓ FOLHA,Essa casa provavelmente é barata.
+94,bathrooms<=[[2. 1.]]?,SIM,95,NÃO,96
+95,NÓ FOLHA,Essa casa provavelmente é cara.
+96,NÓ FOLHA,Essa casa provavelmente é barata.
+97,NÓ FOLHA,Essa casa provavelmente é barata.
+98,grade<=[[3. 1.]]?,SIM,99,NÃO,100
+99,NÓ FOLHA,Essa casa provavelmente é cara.
+100,NÓ FOLHA,Essa casa provavelmente é barata.
+101,bathrooms<=[[1. 1.]]?,SIM,102,NÃO,103
+102,NÓ FOLHA,Essa casa provavelmente é cara.
+103,NÓ FOLHA,Essa casa provavelmente é barata.
+104,sqft_basement<=[[11. 35.]]?,SIM,105,NÃO,110
+105,sqft_above<=[[ 1. 23.]]?,SIM,106,NÃO,107
+106,NÓ FOLHA,Essa casa provavelmente é cara.
+107,sqft_basement<=[[1. 2.]]?,SIM,108,NÃO,109
+108,NÓ FOLHA,Essa casa provavelmente é cara.
+109,NÓ FOLHA,Essa casa provavelmente é barata.
+110,lat<=[[10. 12.]]?,SIM,111,NÃO,118
+111,sqft_basement<=[[10.  4.]]?,SIM,112,NÃO,113
+112,NÓ FOLHA,Essa casa provavelmente é barata.
+113,sqft_living<=[[5. 4.]]?,SIM,114,NÃO,115
+114,NÓ FOLHA,Essa casa provavelmente é barata.
+115,bathrooms<=[[2. 4.]]?,SIM,116,NÃO,117
+116,NÓ FOLHA,Essa casa provavelmente é cara.
+117,NÓ FOLHA,Essa casa provavelmente é barata.
+118,NÓ FOLHA,Essa casa provavelmente é cara.

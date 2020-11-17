@@ -1,0 +1,406 @@
+Accuracy: 0.7
+0.7208333333333334
+PS C:\Users\thais> & c:/Users/thais/AppData/Local/Programs/Python/Python37/python.exe d:/workspace/chatbot_pe/chatbot_engine.py
+Escolha uma arvore de decisão (0-8): 8
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bedrooms<=3?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_living15<=3200?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_basement<=1000?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bathrooms<=2?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_above<=2000?1
+Essa casa provavelmente é barata.
+-------------------------
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bedrooms<=3?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_living15<=3200?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_basement<=1000?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bathrooms<=2?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_above<=2000?1
+Essa casa provavelmente é barata.
+-------------------------
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bedrooms<=3?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+long<=-122200?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_living<=2500?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_above<=2000?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+yr_built<=1990?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+condition<=3?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+grade<=6?2
+Essa casa provavelmente é barata.
+-------------------------
+Escolha uma arvore de decisão (0-8): 8
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bedrooms<=3?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+long<=-122200?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+floors<=2?1
+Essa casa provavelmente é barata.
+-------------------------
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bedrooms<=3?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+long<=-122200?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_living<=2500?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_above<=2000?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+yr_built<=1990?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+condition<=3?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+grade<=6?2
+Essa casa provavelmente é barata.
+-------------------------
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bedrooms<=3?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+long<=-122200?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_living<=2500?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_above<=2000?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+yr_built<=1990?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+condition<=3?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+grade<=6?2
+Essa casa provavelmente é barata.
+-------------------------
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bedrooms<=3?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+long<=-122200?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_living<=2500?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_above<=2000?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+yr_built<=1990?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+condition<=3?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+grade<=6?2
+Essa casa provavelmente é barata.
+-------------------------
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bedrooms<=3?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_living15<=3200?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_basement<=1000?1
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bathrooms<=2?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+sqft_above<=2000?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+condition<=3?1
+Essa casa provavelmente é cara.
+-------------------------
+
+Escolha uma arvore de decisão (0-8): 8
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bedrooms<=3?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+long<=-122200?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+floors<=2?1
+Essa casa provavelmente é barata.
+
+-------------------------
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bedrooms<=3?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+long<=-122200?2
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+floors<=2?1
+Essa casa provavelmente é barata.
+-------------------------
+
+Escolha uma das opções abaixo:
+0 para sair
+1 para SIM
+2 para NÃO
+
+bedrooms<=3?

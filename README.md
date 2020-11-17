@@ -2,7 +2,7 @@
 
 
 Este projeto consiste na elaboração de um chatboot para a classificação do preço de residências em caras ou baratas em um determinado bairro, com o uso de Decision Tree 
-Classification em Python, através da utiização de critérios e escolha das árvores baseadas em sua distribuição. A seguir vejamos o passo a passo de desenvolvimento:
+Classification em Python, através da utiização de critérios que aumentam a precisão das árvores do chatboot. A seguir vejamos o passo a passo de desenvolvimento:
 
 ## Dados de uso
 

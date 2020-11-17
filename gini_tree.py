@@ -6,12 +6,13 @@ from sklearn import metrics #Import scikit-learn metrics module for accuracy cal
 from sklearn.externals.six import StringIO  
 from IPython.display import Image  
 from sklearn.tree import export_graphviz
+from sklearn.model_selection import cross_val_score
 import pydotplus
 import numpy as np
 import csv
 
-col_names = ['price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','yr_renovated','lat','long','sqft_living15','sqft_lot15','expensive']
-col_cri_names = ['price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','yr_renovated','lat','long','sqft_living15','sqft_lot15']
+col_names = ['bedrooms', 'bathrooms', 'sqft_living', 'floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','long','sqft_living15','expensive']
+col_cri_names = ['bedrooms', 'bathrooms', 'sqft_living','floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','long','sqft_living15']
 criterios = pd.read_csv("D:/workspace/chatbot_pe/criterios.csv",sep=",",header=0,names=col_cri_names)
 
 accuracy_file = open("D:/workspace/chatbot_pe/precisoes","w")
@@ -31,12 +32,12 @@ for j in range(0,len(criterios)):
     print(data)
 
     #split dataset in features and target variable
-    feature_cols = ['price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','yr_renovated','lat','long','sqft_living15','sqft_lot15']
+    feature_cols = ['bedrooms', 'bathrooms', 'sqft_living','floors', 'waterfront','view','condition','grade','sqft_above','sqft_basement','yr_built','long','sqft_living15']
     X = data[feature_cols] # Features
     y = data.expensive # Target variable
 
     # Split dataset into training set and test set
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0) # 95% training and 5% test
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.03, random_state=0) # 95% training and 5% test
 
 
     # Create Decision Tree classifer object
@@ -49,7 +50,10 @@ for j in range(0,len(criterios)):
 
     # Model Accuracy, how often is the classifier correct?
     print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
-    accuracy_file.write("Precisao para o "+str(j)+"o conjunto de criterios: "+str(metrics.accuracy_score(y_test, y_pred))+"\n")
+    allScores = cross_val_score(clf, X, y , cv=100)
+    # cross_val_score retorna array com as 10 validações
+    print(allScores.mean())# tomamos a média do score
+    accuracy_file.write("Precisao para o "+str(j)+"o conjunto de criterios: "+str(metrics.accuracy_score(y_test, y_pred)) +" e média de score"+ str(allScores.mean())+"\n")
 
     dot_data = StringIO()
     export_graphviz(clf, out_file=dot_data,  
